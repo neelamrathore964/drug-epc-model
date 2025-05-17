@@ -1,5 +1,3 @@
-### 📘 `README.md`
-
 # 💊🏡 Drug & EPC Model Prediction System
 
 This project implements two machine learning pipelines:
