@@ -18,6 +18,7 @@ Each pipeline includes:
 ---
 
 ## 📁 Project Folder Structure
+**Please copy data files - drugsComTest_raw.csv, drugsComTrain_raw.csv, Certificates.csv, Columns.csv, Recommendations.csv to the data folder following below folder structure.
 
 ```bash
 Drug_epc_model/
@@ -32,22 +33,22 @@ Drug_epc_model/
 │
 ├── data/
 │   ├── drug_reviews/
-│   │   ├── cleaned_dat/                  # Intermediate preprocessed files
+│   │   ├── cleaned_data/                  # Intermediate preprocessed files
 │   │   ├── Test_clean.csv                # Cleaned test data
 │   │   ├── train_clean.csv               # Cleaned train data
 │   │   ├── EDA/                          # Visuals for EDA (e.g., sentiment dist)
 │   │   │   └── sentiment_analysis_train.png
-│   │   ├── drugsComTest_raw.csv          # Original test dataset
-│   │   └── drugsComTrain_raw.csv         # Original training dataset
+│   │   ├── drugsComTest_raw.csv          # Original test dataset, please copy data file here  <<<
+│   │   └── drugsComTrain_raw.csv         # Original training dataset, please copy data file here  <<<
 │   │
 │   └── epc/
 │       ├── Cleaned_data/
 │       │   └── Clean_data.csv            # Final merged and cleaned EPC dataset
 │       ├── EDA/
 │       │   └── potential_energy_rating_dstribution.png  # EPC rating distribution
-│       ├── Certificates.csv              # Raw EPC certificate file (93 features)
-│       ├── Columns.csv                   # Description of all columns in EPC files
-│       └── Recommendations.csv           # EPC improvement suggestions data
+│       ├── Certificates.csv              # Raw EPC certificate file (93 features), please copy data file here <<<
+│       ├── Columns.csv                   # Description of all columns in EPC files, please copy data file here <<<
+│       └── Recommendations.csv           # EPC improvement suggestions data, please copy data file here <<<
 │
 ├── models/
 │   ├── drug_reviews/
@@ -86,17 +87,33 @@ Drug_epc_model/
 
 ## ⚙️ Installation & Setup
 
-1. **Download the project files**
+1. **Option 1: Google Drive**
 
 Download the complete project folder (including code, models, and data) from the shared Google Drive
+If you see a warning like "Can't scan file for viruses", click "Download anyway"
+
+After downloading, extract the ZIP file
+
+```bash
+OR
+```
+
+**Option 2: GitHub**
+
+Clone the repository using Git:
+
+```bash
+git clone https://github.com/neelamrathore964/drug-epc-model.git
+```
 
 2. **Extract the zip**
 
 ```bash
 unzip drug_epc_model.zip
 cd drug_epc_model
+```
 
-2. **Create a virtual environment and install dependencies**
+3. **Create a virtual environment and install dependencies**
 
 ```bash
 python -m venv drug_epc_env
