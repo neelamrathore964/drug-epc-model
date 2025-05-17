@@ -1,0 +1,35 @@
+                        ┌────────────────────────────┐
+                        │        API Client          │
+                        │  (Frontend, Postman, etc.) │
+                        └────────────┬───────────────┘
+                                     │
+                         [HTTP POST to /predict_drug_review]
+                         [Includes API Key in headers]
+                                     │
+                                     ▼
+                 ┌─────────────────────────────────────┐
+                 │           FastAPI Server            │
+                 │     (Loads model on startup)        │
+                 └─────────────────────────────────────┘
+                                     │
+                     ┌───────────────┴────────────────┐
+                     ▼                                ▼
+          ┌────────────────────┐          ┌────────────────────────────┐
+          │ API Key Middleware │          │   /predict_drug_review     │
+          │ - Checks header    │          │  - Accepts review text     │
+          └────────────────────┘          │  - Calls model.predict()   │
+                     │                    └────────────────────────────┘           
+           [Reject 403 if invalid]                   │  
+                                                     ▼
+                               ┌────────────────────────────────────────┐
+                               │  Pretrained ML Pipeline (joblib pkl)  │
+                               │ - Includes vectorizer, selectors, etc.│
+                               │ - Loaded once on startup              │
+                               └────────────────────────────────────────┘
+                                                     │
+                                        [Input passed directly to model]
+                                                     ▼
+                               ┌────────────────────────────────────────┐
+                               │         Prediction Output              │
+                               │   { "sentiment": "positive" }          │
+                               └────────────────────────────────────────┘

@@ -1,0 +1,39 @@
+                        ┌────────────────────────────┐
+                        │        API Client          │
+                        │ (e.g., frontend, Postman)  │
+                        └────────────┬───────────────┘
+                                     │
+                         [Sends HTTP POST Request]
+                                     │
+                              Includes API Key
+                                     │
+                                     ▼
+                 ┌─────────────────────────────────────┐
+                 │           FastAPI Server            │
+                 │         (Main REST API Layer)       │
+                 └─────────────────────────────────────┘
+                                     │
+                     ┌───────────────┴────────────────┐
+                     ▼                                ▼
+          ┌────────────────────┐          ┌────────────────────────┐
+          │ API Key Validation │          │     Endpoint Handler   │
+          │ (Middleware/Auth)  │          │   /predict_epc_rating  │
+          └────────────────────┘          └────────────────────────┘
+                     │                                │
+          [Reject if invalid]                  [Accept Request]
+                                               [Parse JSON Input]
+                                                      │
+                                                      ▼
+                                  ┌─────────────────────────────────────┐
+                                  │     Model & Encoders (loaded once)  │
+                                  │ - Preprocessing steps(e.g.encoders) │
+                                  │ - Trained ML Model (e.g.best model) │
+                                  └─────────────────────────────────────┘
+                                                     │
+                                          [Generate Prediction]
+                                                     │
+                                                     ▼
+                                  ┌─────────────────────────────────────┐
+                                  │        Return JSON Response         │
+                                  │     { "predicted_epc_rating": "C" } │
+                                  └─────────────────────────────────────┘

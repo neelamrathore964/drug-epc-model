@@ -1,0 +1,33 @@
+# Ignore virtual environment folder
+drug_epc_env/
+
+# Ignore environment variable file
+.env
+
+# Ignore data folder
+data/
+
+# Ignore archive folder
+archive/
+
+# Ignore Excel, CSV, PNG, and PKL files anywhere in the project
+*.csv
+*.xlsx
+*.xls
+*.png
+*.pkl
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# VS Code settings (if you use VS Code)
+.vscode/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# macOS and Linux system files
+.DS_Store
+Thumbs.db
