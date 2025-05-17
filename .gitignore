@@ -5,16 +5,21 @@ drug_epc_env/
 .env
 
 # Ignore data folder
-data/
+#data/
 
 # Ignore archive folder
 archive/
 
 # Ignore Excel, CSV, PNG, and PKL files anywhere in the project
-*.csv
+data/drug_reviews/drugs*.csv 
+data/epc/LICENCE.txt
+data/epc/certificates.csv
+data/epc/recommendations.csv
+data/epc/columns.csv
+data/epc/schema.json
 *.xlsx
 *.xls
-*.png
+#*.png
 *.pkl
 
 # Byte-compiled / optimized / DLL files
