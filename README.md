@@ -205,7 +205,8 @@ Dashboards allow:
 ---
 
 ## 🔐 API Security
-- API KEY : "bPMYxNcKo8Z82YoDtLT5lxAob7H_xDw3AgpTcFbRgls"
+Set your api key in .env file
+- API KEY : "set_your_api_key"
 Security implementation includes API key .
 
 ---
