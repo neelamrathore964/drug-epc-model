@@ -1,6 +1,5 @@
 ### 📘 `README.md`
 
-````markdown
 # 💊🏡 Drug & EPC Model Prediction System
 
 This project implements two machine learning pipelines:
@@ -18,7 +17,7 @@ Each pipeline includes:
 ---
 
 ## 📁 Project Folder Structure
-**Please copy data files - drugsComTest_raw.csv, drugsComTrain_raw.csv, Certificates.csv, Columns.csv, Recommendations.csv to the data folder following below folder structure.
+**Please copy data files - drugsComTest_raw.csv, drugsComTrain_raw.csv, Certificates.csv, Columns.csv, Recommendations.csv to the data folder following below folder structure.**
 
 ```bash
 Drug_epc_model/
@@ -87,33 +86,33 @@ Drug_epc_model/
 
 ## ⚙️ Installation & Setup
 
-1. **Option 1: Google Drive**
+
+### 1. Download
+
+**Option 1: Google Drive**
 
 Download the complete project folder (including code, models, and data) from the shared Google Drive
 If you see a warning like "Can't scan file for viruses", click "Download anyway"
 
 After downloading, extract the ZIP file
 
-```bash
-OR
-```
 
 **Option 2: GitHub**
 
-Clone the repository using Git:
+ Clone the repository using Git:
 
 ```bash
 git clone https://github.com/neelamrathore964/drug-epc-model.git
 ```
 
-2. **Extract the zip**
+### 2. Extract the zip
 
 ```bash
 unzip drug_epc_model.zip
 cd drug_epc_model
 ```
 
-3. **Create a virtual environment and install dependencies**
+### 3. Create a virtual environment and install dependencies
 
 ```bash
 python -m venv drug_epc_env
