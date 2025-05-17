@@ -1,12 +1,6 @@
 # Ignore virtual environment folder
 drug_epc_env/
 
-# Ignore environment variable file
-.env
-
-# Ignore data folder
-#data/
-
 # Ignore archive folder
 archive/
 
