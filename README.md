@@ -75,7 +75,7 @@ Drug_epc_model/
 │       └── main.py
 │
 ├── .env                                  # set your api in this file  
-├── read.me                               # Project overview and usage guide (you are here)
+├── README.md                               # Project overview and usage guide (you are here)
 ├── requirements.txt                      # List of dependencies
 └── .gitignore                            # Git exclusions (models, pycache etc.)
 
